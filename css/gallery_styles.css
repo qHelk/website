@@ -1,0 +1,58 @@
+.line {
+    display: flex;
+    width: 100%;
+    overflow: auto;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.image{
+    width: 200px;
+    height: 200px;
+}
+.gallery {
+    display: flex;
+    background-color: white;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: column;
+    
+}
+.wrapper {
+    user-select: none;
+    color: black;
+    background-color: #fff;
+}
+.block {
+    width: 200px;
+    height: 200px;
+}
+  
+#presentation{
+    width: 600px;
+    display: flex;
+}
+.big-block {
+    width: 600px;
+    height: 600px;
+    z-index: 2;
+}
+.left_arrow{
+    position: absolute;
+    width: 300px;
+    height: 600px;
+    z-index: 50;
+    opacity: 0.5;
+}
+.right_arrow{
+    position: absolute;
+    width: 300px;
+    height: 600px;
+    z-index: 50;
+    opacity: 0.5;
+    left: 50%;
+}
+
+.qwe{
+    display: flex;
+    justify-content: space-around;
+}
