@@ -70,19 +70,16 @@ if(isset($_POST['gallery-btn'])){
 			<div id="gallery" class="gallery">
 				<?php
 					$mysql = new mysqli('127.0.0.1:3306','root','','users');
-					$num_string = $mysql->query("SELECT * FROM `gallery`");
-					$id = 0;
-					
+					$sql = "SELECT * FROM `gallery`";
+					$result = $mysql->query($sql);
 				?>
 				<div class="line">
 					
-						<?php	
-							while($num_string->num_rows > $id){
-								$id++;
-								$path = $mysql->query("SELECT `path` FROM `gallery` WHERE `id` = '$id'")->fetch_row();
+						<?php
+							while($path_assoc = $result->fetch_assoc()){
 								echo('
 								<div class="block">
-								<img id = "'. $id .'"class="image" src="'. $path[0] .'">
+								<img id = "'. $path_assoc['id'] .'"class="image" src="'. $path_assoc['path'] .'">
 								</div>
 								');
 								
