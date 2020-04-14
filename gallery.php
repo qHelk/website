@@ -72,6 +72,7 @@ if(isset($_POST['gallery-btn'])){
 					$mysql = new mysqli('127.0.0.1:3306','root','','users');
 					$sql = "SELECT * FROM `gallery`";
 					$result = $mysql->query($sql);
+					$id = 1;
 				?>
 				<div class="line">
 					
@@ -79,10 +80,10 @@ if(isset($_POST['gallery-btn'])){
 							while($path_assoc = $result->fetch_assoc()){
 								echo('
 								<div class="block">
-								<img id = "'. $path_assoc['id'] .'"class="image" src="'. $path_assoc['path'] .'">
+								<img id = "'. $id .'"class="image" src="'. $path_assoc['path'] .'">
 								</div>
 								');
-								
+								$id++;
 							}
 						?>
 					
